@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    command: rackup config.ru -o 0.0.0.0 -p 3000
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+  test:
+    build: .
+    command: rspec
+    volumes:
+      - .:/app
+    env_file:
+      - .env
