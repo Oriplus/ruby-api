@@ -6,21 +6,20 @@ Esta es una API diseñada para gestionar productos una vez estando autenticado. 
 
 ## Instalación
 
+Crear archivo .env tomando como ejemplo .env.example
+
 ```
 docker-compose up app
-
 ```
 
 ## Test
 
 ```
 docker-compose run --rm test
-
 ```
 ## Especificación de OpenAPI.
 
 ```
 {APP_URL}/openapi.yaml
-
 ```
 
