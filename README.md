@@ -6,14 +6,24 @@ Esta es una API diseñada para gestionar productos una vez estando autenticado. 
 
 {APP_URL}/v1/users/login
 
+Enviando en el body las credenciales para la autenticación
 ```
-user: admin
-password: test123
+{
+    "user": "admin",
+    "password": "test123"
+}
 ```
 
-Una vez logueado usar el token recibido en Authorization Bearer Token para:
+## Gestión de productos
 
-* POST {APP_URL}/v1/products: Crear productos, enviando el nombre del producto
+Una vez logueado usar el token recibido e incluirlo en el encabezado como Authorization Bearer Token para:
+
+* POST {APP_URL}/v1/products: Crear productos, enviando el en el body el nombre del producto
+```
+{
+    "name" : "Xbox S"
+}
+```
 * GET {APP_URL}/v1/products: Ver Lista de Productos
 * GET POST {APP_URL}/v1/products/{product_id}: Ver Producto individualmente
 
