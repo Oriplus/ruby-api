@@ -20,7 +20,7 @@ class LoginController
       token = AuthService.encode({ user: user })
       [200, { "content-type" => "application/json" }, [{ token: token }.to_json]]
     else
-      [422, { "content-type" => "application/json" }, ['{"error": "wrong user and password"}']]
+      [422, { "content-type" => "application/json" }, ['{"error": "wrong user or password"}']]
     end
   end
 
